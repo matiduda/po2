@@ -1,9 +1,8 @@
 class Program {
-
 	public static void main(String[] args) {
 
 		if(args.length != 3) {
-			System.out.println("Blad: Wprowadzono bledna liczbe argumentow!\nsprobuj: ./java Main napis 1 3");
+			System.out.println("Blad: Wprowadzono bledna liczbe argumentow!\nsprobuj: java Program napis 1 3");
 			System.exit(1);
 		}
 		
