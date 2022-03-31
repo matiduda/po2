@@ -6,7 +6,9 @@ JC = javac
 
 CLASSES = \
 	Program.java \
-	Game.java
+	UserInterface.java \
+	List.java \
+	Category.java
 
 default: classes
 
