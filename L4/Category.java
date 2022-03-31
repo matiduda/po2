@@ -10,8 +10,12 @@ public class Category {
 		this.productList = new ArrayList<String>();
 	}
 
-	void add(String product) {
-		this.productList.add(product);
+	boolean add(String product) {
+		return this.productList.add(product);
+	}
+
+	boolean remove(String product) {
+		return this.productList.remove(product);
 	}
 
 }

@@ -19,12 +19,20 @@ usunąć wszystkie produkty z ostatnio zapisanej listy i rozpocząć od początk
 */
 
 public class Program {
-	public static void main(String args[]) {
-		Scanner inputScanner = new Scanner(System.in);
 
-		System.out.print("Podaj nazwę listy: ");
-		// String filename = inputScanner.nextLine();
-		String filename = "lista.txt";
+	public static void main(String args[]) {
+
+
+		Scanner inputScanner = new Scanner(System.in);
+		User user = new User();
+
+		String filename = user.readPreference();
+		System.out.println(filename);
+		if(filename.isEmpty()) {
+			System.out.print("Podaj nazwę listy: ");
+			filename = inputScanner.nextLine();
+			user.savePreference(filename);
+		}
 
 		List list = new List(filename);
 		UserInterface userInterface = new UserInterface(list, inputScanner);
@@ -35,5 +43,6 @@ public class Program {
 		inputScanner.close();
 	}
 
-
+		
+	
 }
