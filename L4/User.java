@@ -3,17 +3,28 @@ import java.util.prefs.*;
 public class User {
 
 	// Preference key
-	private static final String FRUIT = "";
+	private static final String LISTPATH = "";
+	Preferences prefs;
 
-	public void savePreference(String favoriteFruit) {
-		Preferences prefs = Preferences.userNodeForPackage(User.class);
+	User() {
+		this.prefs = Preferences.userNodeForPackage(User.class);
+	}
 
-		prefs.put(FRUIT, favoriteFruit);
+	public void savePreference(String listPath) {
+
+		prefs.put(LISTPATH, listPath);
 	}
 
 	public String readPreference() {
 		Preferences prefs = Preferences.userNodeForPackage(User.class);
 
-		return prefs.get(FRUIT, "");
+		return prefs.get(LISTPATH, "");
+	}
+
+	public void removeAll() {
+		
+		Preferences prefs = Preferences.userNodeForPackage(User.class);
+
+		prefs.remove(LISTPATH);
 	}
 }

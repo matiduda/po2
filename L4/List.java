@@ -12,7 +12,7 @@ public class List {
 	final ArrayList<Category> list;
 	final String pathToList;
 	
-	List(String filename) {
+	List(String filename) throws FileNotFoundException {
 		this.pathToList = filename;
 		this.list = new ArrayList<Category>();
 
@@ -47,8 +47,7 @@ public class List {
 			reader.close();
 		}
 		catch(FileNotFoundException ex) {
-			ex.printStackTrace();
-			System.exit(1);
+			throw ex;
 		}
 
 	}

@@ -8,7 +8,8 @@ CLASSES = \
 	Program.java \
 	UserInterface.java \
 	List.java \
-	Category.java
+	Category.java \
+	User.java
 
 default: classes
 
