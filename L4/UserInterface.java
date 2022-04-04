@@ -100,25 +100,31 @@ public class UserInterface {
 	
 	private void deleteElement() {
 
-
 		for (Category cat : this.list.list){
-			System.out.println("\n" + (this.list.list.indexOf(cat) + 1) + ". " + cat.categoryName);
+			System.out.println((this.list.list.indexOf(cat) + 1) + ". " + cat.categoryName);
 		}
 		System.out.print("Wybierz kategorie: ");
 
 		int index = this.scan.nextInt();
 		this.scan.nextLine(); // clear buffer
-
+		
 		Category category = this.list.list.get(index - 1);
+		
+		System.out.println("0. Usuń kategorię");
+		
 		for (String product : category.productList) {
 			System.out.println((category.productList.indexOf(product) + 1) + ". " + product);
-		
 		}
 		System.out.print("Wybierz produkt: ");
 		index = this.scan.nextInt();
 		this.scan.nextLine(); // clear buffer
-
-		category.remove(category.productList.get(index - 1));
+		
+		if(index == 0) {
+			this.list.list.remove(category);
+		} else {
+			category.remove(category.productList.get(index - 1));
+		}
+		
 	}
 
 }

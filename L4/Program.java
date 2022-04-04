@@ -2,15 +2,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
-/*
 
-
-Przy kolejnym uruchomieniu programu użytkownik może:
-
-- wczytać do edycji ostatnio zapisaną listę zakupów (program nie umożliwia jednoczesnego zapisania kilku odrębnych list zakupów)
-- usunąć wszystkie produkty z ostatnio zapisanej listy i rozpocząć od początku przygotowywanie listy zakupów
-
-*/
+/*	PO2 Zadanie 5 - Lista zakupów
+	- edited by Mateusz Duda on 04.04.2022 */
 
 public class Program {
 
@@ -86,7 +80,4 @@ public class Program {
 
 		inputScanner.close();
 	}
-
-		
-	
 }
