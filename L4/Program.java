@@ -12,14 +12,21 @@ public class Program {
 		
 		Scanner inputScanner = new Scanner(System.in);
 		User user = new User();
-		// user.savePreference("");
-		String filename = user.readPreference();
-		System.out.println("Wczytano nazwe: " + filename);
-		int choice = 0;
 
+		if(args.length > 0 && args[0].startsWith("r")) { // Reset user preferences
+			user.savePreference("");
+			System.out.println("Wymazano preferencje.");
+			inputScanner.close();
+			return;
+		}
+
+		String filename = user.readPreference();
+		int choice = 0;
+		
 		if(filename.isEmpty()) {
 			choice = 2;
 		} else {
+			System.out.println("Wczytano nazwe: " + filename);
 
 			System.out.print("Witaj!\n" +
 				"1. Wczytaj ostatnio zapisaną listę zakupów.\n" +

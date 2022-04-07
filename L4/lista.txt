@@ -1,0 +1,15 @@
+# Produkty spożywcze
+Jaja
+Mleko
+Twaróg chudy
+Ser gorgonzola
+
+# Artykuły przemysłowe
+Płyn do mycia naczyń
+Chusteczki higieniczne
+Zmiotka
+
+# Akcesoria do samochodu
+Odświeżacz powietrza
+Kabel mini-jack
+
