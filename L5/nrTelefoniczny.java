@@ -1,4 +1,7 @@
-public class nrTelefoniczny implements Comparable {
+import java.io.PrintStream;
+import java.lang.Comparable;
+
+public class nrTelefoniczny implements Comparable<nrTelefoniczny> {
 	
 	private final byte nrKierunkowy;
 	private final int nrTelefonu;
@@ -8,12 +11,18 @@ public class nrTelefoniczny implements Comparable {
 		this.nrTelefonu = nrTelefonu;
 	}
 
-	public byte getNrKierunkowy() {
-		return nrKierunkowy;
+	public void print(PrintStream out) {
+		out.printf("+%d %d\n", nrKierunkowy, nrTelefonu);
 	}
 
-	public int getNrTelefonu() {
-		return nrTelefonu;
+	@Override
+	public int compareTo(nrTelefoniczny numer) {
+		return numer.getNumber().compareTo(this.getNumber());
 	}
 
+	private String getNumber() {
+		return String.valueOf(nrKierunkowy) + String.valueOf(nrTelefonu);
+	}
+
+	
 }

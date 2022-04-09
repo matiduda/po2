@@ -1,3 +1,5 @@
+import java.io.PrintStream;
+
 public class Firma extends Wpis {
 
 	private final String nazwa;	
@@ -9,9 +11,20 @@ public class Firma extends Wpis {
 	}
 
 	@Override
-	void wpis() {
-		// TODO Auto-generated method stub
-		
+	void opis(PrintStream out) {
+		out.printf("Firma:\t%s\nAdres:\t", nazwa);
+		adres.print(out);
 	}
+
+	@Override
+	int compare(Wpis w) {
+		return adres.compareTo(w.getAddress());
+	}
+
+	@Override
+	public Adres getAddress() {
+		return adres;
+	}
+
 	
 }
