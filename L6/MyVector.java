@@ -109,7 +109,7 @@ class MyVector {
 			output += " ";
 		}
 
-		output += ']';
+m		output += ']';
 		return output;
 	}
 }
