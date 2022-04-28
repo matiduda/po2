@@ -34,6 +34,8 @@ class Program {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		out.println("Zapisano wynik dodawania do pliku!");
 		
 
     }

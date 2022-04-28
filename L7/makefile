@@ -9,8 +9,8 @@ JC = javac
 # If your version of make can't handle the leading tabs on each
 # line, just remove them (these are also just added for readability).
 CLASSES = \
-	Program.java \
-	Game.java
+	Client.java \
+	Server.java
 
 default: classes
 

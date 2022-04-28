@@ -1,1 +1,1 @@
-Wynik dodawania: [ 2 3 4 5 6 7 ]
+Wynik dodawania: [ 1 4 1 4 2 4 ]
