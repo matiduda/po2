@@ -1,8 +1,6 @@
 import java.net.ServerSocket;
 import java.net.Socket;
-
 import static java.lang.System.out;
-
 import java.io.IOException;
 
 public class Server {
@@ -14,16 +12,15 @@ public class Server {
     }
 
     public void startServer() {
-        // Method responsible for initialization of the server
+        out.printf("Initialized server at port " +
+                    serverSocket.getLocalPort() +
+                    "\nwaiting for connections...\n");
+
 
         try {
             while(!serverSocket.isClosed()) {
-                // A new Socket object is created
-                // when the user connects to the server
+                
                 Socket socket = serverSocket.accept();
-
-                out.println("Kliend dołączył do serwera.");
-
                 ClientHandler handler = new ClientHandler(socket);
 
                 Thread thread = new Thread(handler);
@@ -35,7 +32,6 @@ public class Server {
     }
 
     public void closeServerSocket() {
-        // Check if server isn't null
         try {
             if(serverSocket != null) {
                 serverSocket.close();

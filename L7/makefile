@@ -10,7 +10,9 @@ JC = javac
 # line, just remove them (these are also just added for readability).
 CLASSES = \
 	Client.java \
-	Server.java
+	Server.java \
+	Notifier.java \
+	ClientHandler.java
 
 default: classes
 
